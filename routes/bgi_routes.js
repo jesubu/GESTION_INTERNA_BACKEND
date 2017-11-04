@@ -52,6 +52,9 @@ api.delete('/estado/:id',EstadoController.deleteEstado);
 
 api.get('/solicitudes',SolicitudController.getSolicitudes);
 api.get('/solicitudes/:id',SolicitudController.getSolicitud);
+api.post('/solicitud',SolicitudController.saveSolicitud);
+api.put('/solicitud/:id',SolicitudController.updateSolicitud);
+api.delete('/solicitud/:id',SolicitudController.deleteSolicitud);
 
 api.get('/pruebasSeguridad',[md_auth.ensureAuth,permit.isAdmin],UserController.pruebas);
 

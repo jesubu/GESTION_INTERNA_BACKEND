@@ -12,7 +12,11 @@ var SolicitudesSchema=Schema({
     sede:{type:Schema.ObjectId,ref:'Sede'},
     estado:{type:Schema.ObjectId,ref:'Estado'},
     importancia:{type:Schema.ObjectId,ref:'Importancia'},
-    tipo:{type:Schema.ObjectId,ref:'Tipo'}
+    tipo:{type:Schema.ObjectId,ref:'Tipo'},
+    fechaResolucion:{ type: Date },
+    procede:Boolean,
+    tiempoDedicado:Number,
+    resolucion:String
 });
 
 module.exports=mongoose.model('Solicitudes',SolicitudesSchema);
